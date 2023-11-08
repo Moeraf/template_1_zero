@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500&family=Work+Sans:wght@200;400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+:root {
+    --main-color : #10cab7;
+    --secondary-color : #2c4755;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+/* medium */
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+.nav {
+    padding: 20px;
+    height: 65px;
+    margin: 0;
+}
+.nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav .container img {
+    width: 65px;
+}
+
+.nav .container .hamberger{
+    position: relative;
+}
+
+.nav .container .hamberger ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 12px;
+    top: 28px;
+    min-width: 150px;
+    display: none;
+   
+}
+
+.nav .container .hamberger:hover ul {
+    display: block;
+}
+
+.nav .container .hamberger ul::before{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #ddd transparent;
+    position: absolute;
+    right: 0px;
+    top: -20px;
+}
+
+.nav .container .hamberger ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    display: block;
+
+}
+
+.nav .container .hamberger ul li {
+    color: black;
+    background-color: #ddd;
+    border-bottom: gray solid 1px;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.nav .container .hamberger ul li:hover {
+    padding-left: 10px;
+}
+
+.nav .container .hamberger i {
+    transition: 0.3s;
+    width: 30px;
+}
+
+.nav .container .hamberger i:hover{
+    color: var(--main-color);
+
+}
+/* end landing section */
+
+/* start about landing section*/
+
+.landing{
+    background-image: url('../images//montain.jpg');
+    background-size: cover;
+    margin: 0;
+    height: calc(100vh - 65px);
+    z-index: 1;
+}
+
+.landing .text-landing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.landing h1 {
+    text-align: center;
+    margin: 0;
+    color: var(--main-color);
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.landing p {
+    font-size: 19px;
+    line-height: 1.8;
+    width: 320px;
+    max-width: 100%;
+    text-align: center;
+}
+/* end about landing section*/
+
+/* start features section */
+
+.features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #dddddd;
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-gap: 20px;
+}
+
+.features .feat {
+    line-height: 3;
+    padding: 20px;
+    text-align: center;
+}
+
+.features .feat i {
+    color: var(--main-color);
+}
+
+.features .feat h3{
+    font-weight: bold
+}
+
+.features .feat p{
+    color: gray;
+    line-height: 1.8;
+}
+/* end features section */
+
+/* start services section */
+
+.services {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.services .container .services-content {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-gap: 30px;
+}
+
+.services .container .services-content .srv {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.services .container .services-content .srv i{
+    color: var(--main-color);
+    padding: 0 20px 20px 20px ;
+}
+
+.services .container .services-content .srv .text h3 {
+    padding-bottom: 20px;
+}
+
+.services .container .services-content .srv .text p {
+    line-height: 1.8;
+}
+.services .container .services-content .col {
+    position: relative;
+}
+.services .container .services-content .images::before {
+    content: "";
+    background-color: var(--secondary-color);
+    width: 100px;
+    height: 550px;
+    position: absolute;
+    z-index: -1;
+    top: -40px;
+    right: -40px;
+}
+
+.special-heading {
+    color: #ebeced;
+    font-size: 100px;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.special-heading + p {
+    text-align: center;
+    margin-top: -30px;
+    margin-left: 0;
+    font-size: 20px;
+}
+
+@media (max-width: 767px) {
+    .special-heading {
+        font-size: 60px;
+    }
+    .special-heading + p{
+        font-size: 15px;
+        margin: -20px;
+    }
+}
+
